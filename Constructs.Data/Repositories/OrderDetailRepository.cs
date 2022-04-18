@@ -8,7 +8,7 @@ using Constructs.Model.Models;
 
 namespace Constructs.Data.Repositories
 {
-    public interface IOrderDetailRepository
+    public interface IOrderDetailRepository : IRepository<OrderDetail>
     {
     }
 

@@ -3,7 +3,7 @@ using Constructs.Model.Models;
 
 namespace Constructs.Data.Repositories
 {
-    public interface IProductTagRepository
+    public interface IProductTagRepository : IRepository<ProductTag>
     {
     }
 

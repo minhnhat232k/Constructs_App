@@ -3,7 +3,7 @@ using Constructs.Model.Models;
 
 namespace Constructs.Data.Repositories
 {
-    public interface IMenuRepository
+    public interface IMenuRepository : IRepository<Menu>
     {
     }
 
