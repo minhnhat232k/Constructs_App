@@ -1,4 +1,6 @@
-﻿using Constructs.Data.Infrastructure;
+﻿using System;
+using System.Collections.Generic;
+using Constructs.Data.Infrastructure;
 using Constructs.Data.Repositories;
 using Constructs.Model.Models;
 using System.Collections.Generic;
@@ -18,6 +20,8 @@ namespace Constructs.Service
         IEnumerable<PostCategory> GetAllByParentId(int parentId);
 
         PostCategory GetById(int id);
+
+        void Save();
     }
 
     public class PostCategoryService : IPostCategoryService
@@ -55,6 +59,11 @@ namespace Constructs.Service
         public PostCategory GetById(int id)
         {
             return _postCategoryRepository.GetSingleById(id);
+        }
+
+        public void Save()
+        {
+            _unitOfWork.Commit();
         }
 
         public void Update(PostCategory postCategory)
